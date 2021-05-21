@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player">
+      <video class="player__video" src="videos/shortfilm.mp4"></video>
+      <div class="player__controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <button class="player__btn play"><i class="fas fa-play"></i></button>
+        <button class="sound"><i class="fas fa-volume-up"></i></button>
+        <input
+          type="range"
+          name="volumne"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+          class="player__slider"
+        />
+        <button data-skip="-10" class="player__btn backward">
+          <i class="fas fa-backward"></i> 10s
+        </button>
+        <button data-skip="10" class="player__btn forward">
+          10s <i class="fas fa-forward"></i>
+        </button>
+        <button class="player__btn fullscreen">
+          <i class="fas fa-compress"></i>
+        </button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f64de7b412.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
